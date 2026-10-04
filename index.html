@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZADANIE 8 — TABELA DANYCH KOMPUTEROWYCH</title>
+
+<style>
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        padding: 34px 20px;
+        background: #eee5e5;
+        color: #222;
+        font-family: Arial, sans-serif;
+    }
+
+    .page {
+        max-width: 1350px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 28px 56px 24px;
+        min-height: 680px;
+    }
+
+    h1 {
+        margin: 0 0 24px;
+        text-align: center;
+        color: #24527a;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .student {
+        margin: 0 0 20px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 4px solid #24527a;
+        table-layout: fixed;
+    }
+
+    caption {
+        caption-side: top;
+        background: #24527a;
+        color: #fff;
+        padding: 14px 12px 17px;
+        font: bold 29px Georgia, serif;
+    }
+
+    th, td {
+        border: 1px solid #4d90c6;
+        padding: 10px 7px;
+        vertical-align: middle;
+    }
+
+    th {
+        height: 76px;
+        color: #fff;
+        text-align: center;
+        font: bold 16px Arial, sans-serif;
+    }
+
+    th:nth-child(1) { background: #337ab7; }
+    th:nth-child(2) { background: #4778c4; }
+    th:nth-child(3) { background: #5b9bd5; }
+    th:nth-child(4) { background: #70ad47; }
+    th:nth-child(5) { background: #8064a2; }
+    th:nth-child(6) { background: #c65911; }
+
+    /* Kolory wierszy jak na przesłanym projekcie */
+    .row1 { background: #d9eaf7; }
+    .row2 { background: #e2f0d9; }
+    .row3 { background: #fff2cc; }
+    .row4 { background: #e4dfec; }
+    .row5 { background: #e4dfec; }
+
+    .c1 {
+        color: #174a7c;
+        font: bold 16px Arial, sans-serif;
+        text-align: left;
+    }
+
+    .c2 {
+        color: #285aa8;
+        font: 15px Georgia, serif;
+        text-align: center;
+    }
+
+    .c3 {
+        color: #16703b;
+        font: 16px Arial, sans-serif;
+        text-align: center;
+    }
+
+    .c4 {
+        color: #806000;
+        font: 15px Georgia, serif;
+        text-align: right;
+    }
+
+    .c5 {
+        color: #7030a0;
+        font: 16px Arial, sans-serif;
+        text-align: center;
+    }
+
+    .c6 {
+        color: #c65911;
+        font: 15px Georgia, serif;
+        text-align: left;
+    }
+
+    .merged {
+        color: #7030a0;
+        font: bold 18px Georgia, serif;
+        text-align: center;
+    }
+
+    .source {
+        margin: 5px 0 0;
+        text-align: center;
+        color: red;
+        font: italic 10px Arial, sans-serif;
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+<div class="page">
+
+    <h1>ZADANIE 8 — TABELA DANYCH KOMPUTEROWYCH</h1>
+
+    <p class="student">Palcheuski Arseni • 2F • g2</p>
+
+    <table>
+        <caption>Dane kart graficznych — Palcheuski Arseni 2F g2</caption>
+
+        <thead>
+            <tr>
+                <th>Model karty<br>graficznej</th>
+                <th>Taktowanie bazowe</th>
+                <th>Pamięć</th>
+                <th>Szyna pamięci</th>
+                <th>Rdzenie CUDA /<br>jednostki</th>
+                <th>Typ chłodzenia</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="row1">
+                <td class="c1">GeForce RTX 4070 Ti<br>SUPER</td>
+                <td class="c2">2340 MHz</td>
+                <td class="c3">16 GB GDDR6X</td>
+                <td class="c4">256-bit</td>
+                <td class="c5">8448 CUDA</td>
+                <td class="c6">Aktywne — 3 wentylatory</td>
+            </tr>
+
+            <tr class="row2">
+                <td class="c1">GeForce RTX 4070<br>SUPER</td>
+                <td class="c2">1980 MHz</td>
+                <td class="c3">12 GB GDDR6X</td>
+                <td class="c4">192-bit</td>
+                <td class="c5">7168 CUDA</td>
+                <td class="c6">Aktywne — 2<br> wentylatory</td>
+            </tr>
+
+            <tr class="row3">
+                <td class="c1">Radeon RX 7800 XT</td>
+                <td class="c2">2124 MHz</td>
+                <td class="c3">16 GB GDDR6</td>
+                <td class="c4">256-bit</td>
+                <td class="c5">60 CU</td>
+                <td class="c6">Aktywne — 2 wentylatory</td>
+            </tr>
+
+            <tr class="row4">
+                <td class="c1">GeForce RTX 4060<br>Ti</td>
+                <td class="c2">2310 MHz</td>
+                <td class="c3">8 GB GDDR6</td>
+                <td class="c4">128-bit</td>
+                <td class="c5">4352 CUDA</td>
+
+                <!-- dokładne scalanie pionowe: 2 komórki -->
+                <td class="c6" rowspan="2" style="text-align:center;">
+                    <b>Aktywne</b><br>— 2 wentylatory
+                </td>
+            </tr>
+
+            <tr class="row5">
+                <!-- dokładne scalanie poziome: 3 komórki -->
+                <td class="merged" colspan="3">Karta klasy gaming — 16 GB pamięci</td>
+                <td class="c4">128-bit</td>
+                <td class="c5">32 CU</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="source">
+        Źródło: opracowanie własne na podstawie specyfikacji producentów NVIDIA i AMD.
+    </p>
+
+</div>
+</body>
+</html>
